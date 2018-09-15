@@ -269,7 +269,7 @@ def player_with_longest_name
   game_hash.each do |location, team_data|
     team_data.each do |k,v|
       if k == :players
-        names << team_data[k].keys
+        names << team_data[k].keys.max
         puts team_data[k].keys.max
       end
     end
