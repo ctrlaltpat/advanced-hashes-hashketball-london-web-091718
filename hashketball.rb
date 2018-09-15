@@ -263,5 +263,8 @@ def winning_team
   game_hash[score.key(score.values.max)][:team_name]
 end
 
-
+def player_with_longest_name
+  longest_name = ""
+  
+end
 
