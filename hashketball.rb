@@ -260,7 +260,7 @@ def winning_team
     score[location] = points
   end
   
-  game_hash[(":"+score.key(score.values.max)).to_sym][:team_name]
+  game_hash[":"+score.key(score.values.max).to_sym][:team_name]
 end
 
 
