@@ -258,7 +258,7 @@ def winning_team
         end
       end
     end
-    score[location => points]
+    score[location] = points
   end
   puts score
   winner
