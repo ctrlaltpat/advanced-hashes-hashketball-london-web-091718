@@ -218,10 +218,9 @@ def all_player_names
       end
     end
   end
-  puts names
   names
 end
-all_player_names
+
 def big_shoe_rebounds
   largest_shoe_size = 0
   rebounds = 0
