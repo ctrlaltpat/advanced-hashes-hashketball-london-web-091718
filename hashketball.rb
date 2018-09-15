@@ -230,7 +230,7 @@ def big_shoe_rebounds
     puts size
     if size > largest_shoe_size
       largest_shoe_size = size
-      puts player_stats(p)[:shoe]
+      puts player_stats(p)
     end
   end
   rebounds
