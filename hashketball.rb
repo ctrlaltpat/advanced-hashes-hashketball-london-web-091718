@@ -270,6 +270,7 @@ def player_with_longest_name
     team_data.each do |k,v|
       if k == :players
         names << team_data[k].keys
+        puts team_data[k].keys.max
       end
     end
   end
