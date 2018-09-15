@@ -269,7 +269,7 @@ def player_with_longest_name
     team_data.each do |k,v|
       if k == :players
         team_data[k].keys.each do |l|
-          if l.length > longest_name
+          if l.length > longest_name.length
             longest_name = l
           end
         end
