@@ -211,7 +211,10 @@ def big_shoe_rebounds
     team_data.each do |k,v|
       if k == :players 
         v.each do |l,w|
-          puts team_data[k][l][:shoe]
+          if team_data[k][l][:shoe] > largest_shoe_size
+            largest_shoe_size = team_data[k][l][:shoe]
+            rebounds = team_data[k][l][:rebounds]
+          end
         end
       end
     end
