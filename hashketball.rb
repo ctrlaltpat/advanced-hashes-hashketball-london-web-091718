@@ -211,7 +211,7 @@ def big_shoe_rebounds
     team_data.each do |k,v|
       if k == :players 
         v.each do |l,w|
-          puts l
+          puts team_data[k][l][:shoe]
         end
       end
     end
