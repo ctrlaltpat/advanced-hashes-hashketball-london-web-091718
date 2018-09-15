@@ -232,9 +232,10 @@ def most_points_scored
     team_data.each do |k,v|
       if k == :players 
         v.each do |l,w|
-          if team_data[k][l][:shoe] > largest_shoe_size
-            largest_shoe_size = team_data[k][l][:shoe]
-            rebounds = team_data[k][l][:rebounds]
+          points = num_points_scored(l) 
+          if points > most_points
+            most_points = points
+            player = l
           end
         end
       end
