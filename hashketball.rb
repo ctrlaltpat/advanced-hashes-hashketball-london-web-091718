@@ -245,7 +245,27 @@ def most_points_scored
   player
 end
 
-
+def winning_team
+  winner = ""
+  team1 = 0
+  team2 = 0
+  
+  game_hash.each do |location, team_data|
+    team_data.each do |k,v|
+      if k == :players 
+        v.each do |l,w|
+          points = num_points_scored(l) 
+          if points > most_points
+            most_points = points
+            player = l
+          end
+        end
+      end
+    end
+  end
+  
+  winner
+end
 
 
 
