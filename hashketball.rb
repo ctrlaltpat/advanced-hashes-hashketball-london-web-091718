@@ -247,23 +247,20 @@ end
 
 def winning_team
   winner = ""
-  team1 = 0
-  team2 = 0
+  score = {}
   
   game_hash.each do |location, team_data|
+    points = 0
     team_data.each do |k,v|
       if k == :players 
         v.each do |l,w|
-          points = num_points_scored(l) 
-          if points > most_points
-            most_points = points
-            player = l
-          end
+          points += team_data[k][l][:points]
         end
       end
     end
+    score[location => points]
   end
-  
+  puts score
   winner
 end
 
