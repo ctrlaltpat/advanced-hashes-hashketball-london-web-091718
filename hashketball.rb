@@ -232,6 +232,7 @@ def big_shoe_rebounds
       largest_shoe_size = size
       rebounds = player_stats(p)[:rebounds]
     end
+  end
   rebounds
 end
 
