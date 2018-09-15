@@ -261,7 +261,7 @@ def winning_team
     score[location] = points
   end
   
-  score.max
+  puts score.key(score.max)
   winner
 end
 
