@@ -246,7 +246,6 @@ def most_points_scored
 end
 
 def winning_team
-  winner = ""
   score = {}
   
   game_hash.each do |location, team_data|
@@ -261,8 +260,7 @@ def winning_team
     score[location] = points
   end
   
-  puts score.key(score.values.max)
-  winner
+  game_hash[":"+score.key(score.values.max)]
 end
 
 
