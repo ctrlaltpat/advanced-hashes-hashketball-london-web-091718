@@ -265,6 +265,14 @@ end
 
 def player_with_longest_name
   longest_name = ""
-  
+  names = []
+  game_hash.each do |location, team_data|
+    team_data.each do |k,v|
+      if k == :players
+        names << team_data[k].keys
+      end
+    end
+  end
+  names
 end
 
