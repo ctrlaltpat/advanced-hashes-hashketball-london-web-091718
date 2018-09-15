@@ -260,7 +260,8 @@ def winning_team
     end
     score[location] = points
   end
-  puts score
+  
+  score.max
   winner
 end
 
