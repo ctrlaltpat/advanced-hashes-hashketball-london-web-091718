@@ -205,7 +205,6 @@ def player_stats(player)
       end
     end
   end
-  puts stats
   stats
 end
 
