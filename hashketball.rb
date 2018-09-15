@@ -203,30 +203,18 @@ def player_stats(player)
   stats
 end
 
-def all_player_names
-  names = []
-  game_hash.each do |location, team_data|
-    team_data.each do |k,v|
-      if k == :players
-        names << team_data[k].keys
-      end
-    end
-  end
-  names
-end
-
 def big_shoe_rebounds
   largest_shoe_size = 0
   rebounds = 0
   
-  all_player_names.each do |p|
-    size = shoe_size(p)
-    puts size
-    if size > largest_shoe_size
-      largest_shoe_size = size
-      puts player_stats(p)
+  game_hash.each do |location, team_data|
+    team_data.each do |k,v|
+      if k == :players && team_data[k].include?(player)
+        size = team_data[k][player][:shoe]
+      end
     end
   end
+  
   rebounds
 end
 
