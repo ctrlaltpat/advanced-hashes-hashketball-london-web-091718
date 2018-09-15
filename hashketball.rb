@@ -220,7 +220,7 @@ def big_shoe_rebounds
   rebounds = 0
   
   all_player_names.each do |p|
-    puts shoe_size(p)
+    size = shoe_size(p)
     puts size
     if size > largest_shoe_size
       largest_shoe_size = size
