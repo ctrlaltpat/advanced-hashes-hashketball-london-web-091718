@@ -209,8 +209,10 @@ def big_shoe_rebounds
   
   game_hash.each do |location, team_data|
     team_data.each do |k,v|
-      if k == :players && team_data[k].include?(player)
-        size = team_data[k][player][:shoe]
+      if k == :players 
+        v.each do |l,w|
+          puts l
+        end
       end
     end
   end
