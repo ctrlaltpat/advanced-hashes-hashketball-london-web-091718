@@ -144,7 +144,6 @@ def num_points_scored(player)
       end
     end
   end
-  puts points
   points
 end
 
@@ -157,7 +156,6 @@ def shoe_size(player)
       end
     end
   end
-  puts size
   size
 end
 
@@ -168,7 +166,6 @@ def team_colors(team)
       colors = team_data[:colors]
     end
   end
-  puts colors
   colors
 end
 
@@ -177,7 +174,6 @@ def team_names
   game_hash.each do |location, team_data|
     names << team_data[:team_name]
   end
-  puts names
   names
 end
 
@@ -192,7 +188,6 @@ def player_numbers(team)
       end
     end
   end
-  puts jersey_numbers
   jersey_numbers
 end
 
